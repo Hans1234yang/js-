@@ -1,0 +1,26 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+     <input type="text" id="input1" />
+</body>
+</html>
+
+<script type="text/javascript">
+    var timer = null;
+
+    document.querySelector('#input1').addEventListener('keyup', function () {
+       
+        var _thisNew = this;
+
+        clearTimeout(timer);
+
+        timer = setTimeout(function () {
+            console.log(_thisNew.value);
+        },1000)
+    }, false)
+</script>
